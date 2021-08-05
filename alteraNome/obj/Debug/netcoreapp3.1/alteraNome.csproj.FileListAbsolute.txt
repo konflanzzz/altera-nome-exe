@@ -1,0 +1,13 @@
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.csprojAssemblyReference.cache
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.AssemblyInfoInputs.cache
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.AssemblyInfo.cs
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.csproj.CoreCompileInputs.cache
+C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.exe
+C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.deps.json
+C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.runtimeconfig.json
+C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.runtimeconfig.dev.json
+C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.dll
+C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.pdb
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.dll
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.pdb
+C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.genruntimeconfig.cache
