@@ -11,3 +11,15 @@ C:\Projetos\alteraNome\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.pdb
 C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.dll
 C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.pdb
 C:\Projetos\alteraNome\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.genruntimeconfig.cache
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.exe
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.deps.json
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.runtimeconfig.json
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.runtimeconfig.dev.json
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.dll
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\netcoreapp3.1\alteraNome.pdb
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.AssemblyInfoInputs.cache
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.AssemblyInfo.cs
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.csproj.CoreCompileInputs.cache
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.dll
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.pdb
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.genruntimeconfig.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\alteraNome\\alteraNome\\alteraNome.csproj": {}
+    "C:\\Users\\fernando.konflanz\\GitHub\\alteraNomeExe\\alteraNome\\alteraNome.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\alteraNome\\alteraNome\\alteraNome.csproj": {
+    "C:\\Users\\fernando.konflanz\\GitHub\\alteraNomeExe\\alteraNome\\alteraNome.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\alteraNome\\alteraNome\\alteraNome.csproj",
+        "projectUniqueName": "C:\\Users\\fernando.konflanz\\GitHub\\alteraNomeExe\\alteraNome\\alteraNome.csproj",
         "projectName": "alteraNome",
-        "projectPath": "C:\\Projetos\\alteraNome\\alteraNome\\alteraNome.csproj",
+        "projectPath": "C:\\Users\\fernando.konflanz\\GitHub\\alteraNomeExe\\alteraNome\\alteraNome.csproj",
         "packagesPath": "C:\\Users\\fernando.konflanz\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\alteraNome\\alteraNome\\obj\\",
+        "outputPath": "C:\\Users\\fernando.konflanz\\GitHub\\alteraNomeExe\\alteraNome\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fernando.konflanz\\AppData\\Roaming\\NuGet\\NuGet.Config",
