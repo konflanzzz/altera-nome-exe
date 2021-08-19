@@ -16,9 +16,9 @@ namespace alteraNome
             string[] linhas = new string[2] { "", "" };
 
             // array que vai armazenar os diretorios
-            try 
+            try
             {
-                linhas = File.ReadAllLines(@"./config.txt"); 
+                linhas = File.ReadAllLines(@"./config.txt");
             }
 
             catch (Exception ex) // e se o arquivo nao estiver junto ao .exe?
@@ -28,13 +28,13 @@ namespace alteraNome
                 Console.ReadLine();
                 return;
             }
-            
+
 
             // variaveis recebem o diretorio da pasta Temp e da Pasta Remessas do Client Suite
-            if (linhas[0] != "") 
-            { 
+            if (linhas[0] != "")
+            {
                 caminhoTemp = linhas[0];
-            } 
+            }
             else
             {
                 Console.WriteLine("Favor infomar o caminho do diretorio Temp no arquivo config.txt");
@@ -65,14 +65,13 @@ namespace alteraNome
                     Console.WriteLine("Diretorio temporario foi criado em: ", caminhoTemp);
                 }
 
-                catch(Exception ex) // caso o arquivo config.txt nao esteja presente junto ao .exe
+                catch (Exception ex) // caso o arquivo config.txt nao esteja presente junto ao .exe
                 {
                     Console.WriteLine("Houve um problema ao criar o diretorio Temp: ");
                     Console.WriteLine(ex.Message);
                     Console.ReadLine();
                     return;
                 }
-
             }
 
             // verifica se o diretorio da pasta Remessas está acessivel / existe 
@@ -99,13 +98,13 @@ namespace alteraNome
                         nomeArquivo = Path.GetFileNameWithoutExtension(n);
 
                         // caso seja um arquivo de emissao, altera o nome mas mantem a numeracao informada
-                        
+
                         if (Regex.IsMatch(nomeArquivo, @"^[0-9]+$"))
                         {
                             // caso seja um arquivo de emissao, mantem a numeracao e adiciona a nomenclatura
                             novoNome = "NFEEMISSAO_" + nomeArquivo + ".txt";
-                        } 
-                        
+                        }
+
                         else if (nomeArquivo.ToUpper().Contains("NOTA") && !nomeArquivo.All(char.IsDigit))
                         {
                             novoNome = "NFEEMISSAO_" + nomeArquivo.ToUpper().Replace("NOTA", "") + ".txt";
@@ -159,11 +158,11 @@ namespace alteraNome
 
                         // para cada um dos arquivos do array, altera o nome final do arquivo
                         string nomeFinalArquivo = Path.Combine(caminhoRemessas, novoNome);
-                        
+
                         try
-                        {   
+                        {
                             // para cada um dos arquivos do array, move para a pasta remessas
-                            File.Move(n, nomeFinalArquivo, true);
+                            File.Move(n, nomeFinalArquivo);
                         }
 
                         catch (Exception ex)

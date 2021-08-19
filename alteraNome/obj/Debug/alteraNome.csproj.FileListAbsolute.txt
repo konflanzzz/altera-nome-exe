@@ -1,0 +1,14 @@
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\bin\Debug\alteraNome.exe.config
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\bin\Debug\alteraNome.exe
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\bin\Debug\alteraNome.pdb
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\obj\Debug\alteraNome.csprojAssemblyReference.cache
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\obj\Debug\alteraNome.csproj.CoreCompileInputs.cache
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\obj\Debug\alteraNome.exe
+C:\Users\fernando.konflanz\Desktop\alteraNome\alteraNome\obj\Debug\alteraNome.pdb
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\alteraNome.exe.config
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\alteraNome.exe
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\bin\Debug\alteraNome.pdb
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\alteraNome.csprojAssemblyReference.cache
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\alteraNome.csproj.CoreCompileInputs.cache
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\alteraNome.exe
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\alteraNome.pdb
