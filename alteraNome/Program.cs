@@ -149,6 +149,11 @@ namespace alteraNome
                                 case var target when nomeArquivo.ToUpper().Contains("PREV"):
                                     novoNome = "NFEPREVIA_" + nomeArquivo.ToUpper().Replace("PREV", "") + ".txt";
                                     break;
+
+                                // altera o nome para carta de correcao
+                                case var target when nomeArquivo.ToUpper().Contains("INUT"):
+                                    novoNome = "NFEINUT_" + nomeArquivo.ToUpper().Replace("INUT", "") + ".txt";
+                                    break;
                             }
                         }
 
