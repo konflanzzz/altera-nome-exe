@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace alteraNome
@@ -45,6 +46,7 @@ namespace alteraNome
             {
                 caminhoRemessas = linhas[1];
             }
+
             else
             {
                 Console.WriteLine("Favor infomar o caminho do diretorio Remessas no arquivo config.txt");
@@ -62,6 +64,7 @@ namespace alteraNome
                     Directory.CreateDirectory(caminhoTemp);
                     Console.WriteLine("Diretorio temporario foi criado em: ", caminhoTemp);
                 }
+
                 catch(Exception ex) // caso o arquivo config.txt nao esteja presente junto ao .exe
                 {
                     Console.WriteLine("Houve um problema ao criar o diretorio Temp: ");
@@ -96,49 +99,55 @@ namespace alteraNome
                         nomeArquivo = Path.GetFileNameWithoutExtension(n);
 
                         // caso seja um arquivo de emissao, altera o nome mas mantem a numeracao informada
+                        
                         if (Regex.IsMatch(nomeArquivo, @"^[0-9]+$"))
                         {
                             // caso seja um arquivo de emissao, mantem a numeracao e adiciona a nomenclatura
                             novoNome = "NFEEMISSAO_" + nomeArquivo + ".txt";
+                        } 
+                        
+                        else if (nomeArquivo.ToUpper().Contains("NOTA") && !nomeArquivo.All(char.IsDigit))
+                        {
+                            novoNome = "NFEEMISSAO_" + nomeArquivo.ToUpper().Replace("NOTA", "") + ".txt";
                         }
 
                         else
                         {
-                            switch (nomeArquivo.ToUpper())
+                            switch (nomeArquivo)
                             {
                                 // altera o nome para cancelamento
-                                case "CANC":
-                                    novoNome = "NFECANC_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("CANC"):
+                                    novoNome = "NFECANC_" + nomeArquivo.ToUpper().Replace("CANC", "") + ".txt";
                                     break;
 
                                 // altera o nome para carta de correcao
-                                case "CCE":
-                                    novoNome = "NFECCE_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("CCE"):
+                                    novoNome = "NFECCE_" + nomeArquivo.ToUpper().Replace("CCE", "") + ".txt";
                                     break;
 
                                 // altera o nome para consulta de situacao da NFe
-                                case "SITU":
-                                    novoNome = "NFESITUACAO_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("SITU"):
+                                    novoNome = "NFESITUACAO_" + nomeArquivo.ToUpper().Replace("SITU", "") + ".txt";
                                     break;
 
                                 // altera o nome para agendamento de envio de email da NFe
-                                case "MAIL":
-                                    novoNome = "NFEREENVIOEMAIL_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("MAIL"):
+                                    novoNome = "NFEREENVIOEMAIL_" + nomeArquivo.ToUpper().Replace("MAIL", "") + ".txt";
                                     break;
 
                                 // altera o nome para reimpressao da NFe
-                                case "RIMP":
-                                    novoNome = "NFEREIMPRIME_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("RIMP"):
+                                    novoNome = "NFEREIMPRIME_" + nomeArquivo.ToUpper().Replace("RIMP", "") + ".txt";
                                     break;
 
                                 // altera o nome para reimpressao de evento da NFe
-                                case "REVE":
-                                    novoNome = "NFEREIMPRIMEEVENTO_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("REVE"):
+                                    novoNome = "NFEREIMPRIMEEVENTO_" + nomeArquivo.ToUpper().Replace("REVE", "") + ".txt";
                                     break;
 
                                 // altera o nome para previa da DANFE
-                                case "PREV":
-                                    novoNome = "NFEPREVIA_.txt";
+                                case var target when nomeArquivo.ToUpper().Contains("PREV"):
+                                    novoNome = "NFEPREVIA_" + nomeArquivo.ToUpper().Replace("PREV", "") + ".txt";
                                     break;
                             }
                         }
@@ -151,6 +160,7 @@ namespace alteraNome
                             // para cada um dos arquivos do array, move para a pasta remessas
                             File.Move(n, nomeFinalArquivo, true);
                         }
+
                         catch (Exception ex)
                         {
                             Console.WriteLine("Houve um problema ao mover o arquivo: ");
@@ -162,6 +172,7 @@ namespace alteraNome
                     }
                 }
             }
+
             else
             {
                 Console.WriteLine("Houve um problema!");

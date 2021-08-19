@@ -23,3 +23,4 @@ C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3
 C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.dll
 C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.pdb
 C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.genruntimeconfig.cache
+C:\Users\fernando.konflanz\GitHub\alteraNomeExe\alteraNome\obj\Debug\netcoreapp3.1\alteraNome.csprojAssemblyReference.cache
