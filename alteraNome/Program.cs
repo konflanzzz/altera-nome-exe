@@ -23,8 +23,9 @@ namespace alteraNome
 
             catch (Exception ex) // e se o arquivo nao estiver junto ao .exe?
             {
-                Console.WriteLine("Houve um problema ao ler o arquivo confif.txt: ");
+                Console.WriteLine("Houve um problema ao ler o arquivo config.txt: ");
                 Console.WriteLine(ex.Message);
+                gravarLinhaLog("Houve um problema ao ler o arquivo config.txt: " + ex.Message);
                 Console.ReadLine();
                 return;
             }
@@ -38,6 +39,7 @@ namespace alteraNome
             else
             {
                 Console.WriteLine("Favor infomar o caminho do diretorio Temp no arquivo config.txt");
+                gravarLinhaLog("Nao foi informado caminho temp no arquivo config.txt");
                 Console.ReadLine();
                 return;
             }
@@ -50,6 +52,7 @@ namespace alteraNome
             else
             {
                 Console.WriteLine("Favor infomar o caminho do diretorio Remessas no arquivo config.txt");
+                gravarLinhaLog("Nao foi possivel acessar diretorio Remessas");
                 Console.ReadLine();
                 return;
             }
@@ -58,17 +61,20 @@ namespace alteraNome
             if (Directory.Exists(caminhoTemp) == false)
             {
                 Console.WriteLine("Diretorio temporario nao foi encontrado.");
+                gravarLinhaLog("Diretorio temporario nao foi encontrado.");
 
                 try
                 {
                     Directory.CreateDirectory(caminhoTemp);
                     Console.WriteLine("Diretorio temporario foi criado em: ", caminhoTemp);
+                    gravarLinhaLog("Diretorio temporario foi criado em: " + caminhoTemp);
                 }
 
                 catch (Exception ex) // caso o arquivo config.txt nao esteja presente junto ao .exe
                 {
                     Console.WriteLine("Houve um problema ao criar o diretorio Temp: ");
                     Console.WriteLine(ex.Message);
+                    gravarLinhaLog("Houve um problema ao criar o diretorio Temp: " + ex.Message);
                     Console.ReadLine();
                     return;
                 }
@@ -78,6 +84,7 @@ namespace alteraNome
             if (Directory.Exists(caminhoRemessas) == false)
             {
                 Console.WriteLine("Diretorio Remessas nao foi encontrado.");
+                gravarLinhaLog("Diretorio Remessas nao foi encontrado.");
             }
 
             if (Directory.Exists(caminhoTemp))
@@ -161,25 +168,59 @@ namespace alteraNome
 
                         try
                         {
-                            // para cada um dos arquivos do array, move para a pasta remessas
-                            File.Move(n, nomeFinalArquivo);
+                            if (File.Exists(Path.Combine(n,nomeFinalArquivo)))
+                            {
+                                // caso o arquivo já existe, substitui
+                                File.Delete(Path.Combine(caminhoRemessas, novoNome));
+                                gravarLinhaLog("Substituindo arquivo já existente...");
+                                File.Move(n, nomeFinalArquivo);
+                                gravarLinhaLog(nomeArquivo + " -> " + novoNome);
+                            }
+
+                            else 
+                            {
+                                // para cada um dos arquivos do array, move para a pasta remessas
+                                File.Move(n, nomeFinalArquivo);
+                                gravarLinhaLog(nomeArquivo + " -> " + novoNome);
+                            }
+                            
                         }
 
                         catch (Exception ex)
                         {
                             Console.WriteLine("Houve um problema ao mover o arquivo: ");
                             Console.WriteLine(ex.Message);
+                            gravarLinhaLog("Houve um problema ao mover o arquivo: " + ex.Message);
                             Console.ReadLine();
                             return;
                         }
-
+                    }
+                    else
+                    {
+                        gravarLinhaLog(nomeArquivo + " nao foi movido pois não é um arquivo .txt");
                     }
                 }
             }
 
             else
             {
-                Console.WriteLine("Houve um problema!");
+                Console.WriteLine("Houve um problema! Por favor verifique os logs.");
+            }
+        }
+
+        public static void gravarLinhaLog(string registro)
+        {
+            string caminhoLogs = @".\logs\";
+
+            if (!Directory.Exists(caminhoLogs))Directory.CreateDirectory(caminhoLogs);
+
+            string data = DateTime.Now.ToShortDateString();
+            string hora = DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss:ffff");
+            string nomeLog = data.Replace("/", "");
+
+            using (StreamWriter outputFile = new StreamWriter(caminhoLogs + nomeLog + ".txt", true))
+            {
+                outputFile.WriteLine(hora + " - " + registro);
             }
         }
     }
